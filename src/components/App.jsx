@@ -10,10 +10,10 @@ function App() {
 
   function addNote(newNote){
     setNote(prevValue => {
-      return [...prevValue, {
+      return [{
         title : newNote.title, 
         content : newNote.content,
-        key : noteIndex}];
+        key : noteIndex}, ...prevValue];
     });
     setNoteIndex(noteIndex + 1);
   }
